@@ -1,0 +1,5 @@
+para lanzar el comando a todos los routers de una sola vez
+entra en python y ejecuta el comando 
+python3 all_in_one_R-1_to_R-12.py
+
+recuerda tener lista la topologia con sus correspondientes interfaces y acceso netconf, ssh.
