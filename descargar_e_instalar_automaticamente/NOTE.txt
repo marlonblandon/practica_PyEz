@@ -3,3 +3,19 @@ entra en python y ejecuta el comando
 python3 all_in_one_R-1_to_R-12.py
 
 recuerda tener lista la topologia con sus correspondientes interfaces y acceso netconf, ssh.
+
+
+Cuando se ejecuta el programa se crea una carpeta y ahi se mete el archivo de configuracion 
+si quieres que cuando termine de ejecutar ese comando hacia el router, elimine esa carpeta que creo 
+puedes ver el archivo R-1.py esto eliminara la carpeta despues de haber hecho la configuracion
+el comando es: 
+
+try:
+        shutil.rmtree(destino)
+        print(f"🗑️ Carpeta '{destino}' eliminada automáticamente después de ejecutar la configuración.")
+    except Exception as e:
+        print(f"⚠️ No se pudo eliminar la carpeta '{destino}': {e}")
+        
+        
+        Nota: revisa el archivo para verificar las tabulaciones adecuadas
+              carpeta ( descargar_e_instalar_automaticamente )
