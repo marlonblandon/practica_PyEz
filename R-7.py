@@ -16,6 +16,7 @@ with Device(host='30.0.0.56', user='root', passwd='Juniper') as dev:
 		cu.load("set protocols mpls interface em0.0", format="set")
 		cu.load("set protocols mpls interface em1.0", format="set")
 		cu.load("set protocols mpls interface em2.0", format="set")
+		cu.load("set protocols mpls icmp-tunneling", format="set")
 		cu.load("set protocols rsvp interface em0.0", format="set")
 		cu.load("set protocols rsvp interface em1.0", format="set")
 		cu.load("set protocols rsvp interface em2.0", format="set")
