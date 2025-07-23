@@ -1,6 +1,7 @@
 import requests
 import os
 import subprocess
+import shutil  # ✅ Importar al inicio por claridad
 
 # 📦 URL cruda del archivo R-2.py en GitHub (rama master)
 url = "https://raw.githubusercontent.com/marlonblandon/practica_PyEz/master/R-2.py"
@@ -29,5 +30,13 @@ if respuesta.status_code == 200:
     print(resultado.stdout)
     print("❗ Errores (si hubo):")
     print(resultado.stderr)
+    #..............esta parte entre los puntos es pocional.................
+    # 🧹 Eliminar carpeta después de aplicar la configuración
+    try:
+        shutil.rmtree(destino)
+        print(f"🗑️ Carpeta '{destino}' eliminada automáticamente después de ejecutar la configuración.")
+    except Exception as e:
+        print(f"⚠️ No se pudo eliminar la carpeta '{destino}': {e}")
+    #...................................................................... 
 else:
     print(f"❌ Error al descargar el archivo. Código: {respuesta.status_code}")
